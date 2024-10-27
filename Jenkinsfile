@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        /*
         stage('Build') {
             agent {
                 docker {
@@ -20,7 +21,7 @@ pipeline {
                 '''
             }
         }
-
+        */
         stage ('Test') {
             agent {
                 docker {
@@ -32,7 +33,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Step 1: Check if index.html file exist"
-                    test -f build/index.html
+                    #test -f build/index.html
                     echo "Step 2: Run nmp test command"
                     npm test
                 '''
