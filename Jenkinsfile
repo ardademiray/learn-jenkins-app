@@ -20,5 +20,16 @@ pipeline {
                 '''
             }
         }
+
+        stage ('Test') {
+            steps {
+                sh '''
+                    echo "Step 1: Check if index.html file exist"
+                    test -f build/index.html
+                    echo "Step 2: Run nmp test command"
+                    npm test
+                '''
+            }
+        }
     }
 }
