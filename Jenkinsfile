@@ -92,7 +92,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'STAGING_URL_TO_BE_SET'
+                CI_ENVIRONMENT_URL = 'https://chipper-pixie-356e56.netlify.app'
             }
 
             steps {
